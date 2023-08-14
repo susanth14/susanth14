@@ -1,0 +1,10 @@
+.card{
+    width: 500px;
+    padding: 30px;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+}
+.f1{
+    margin-left: 100px;
+}

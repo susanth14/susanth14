@@ -1,0 +1,20 @@
+<table class = "table">
+    <thead>
+        <tr>
+            <th>S.No.</th>
+            <th>ProductName</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of selecteditems let i = index">
+            <td>{{i+1}}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.rate}}</td>
+          <td>{{item.count}}</td>
+          <td>{{item.count * item.rate}}</td>
+          </tr>
+      </tbody>
+</table>

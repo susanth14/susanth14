@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-2 col-sm-4" *ngFor="let product of products">
+        <div class="card" style="width: 110%; height: 100%;">
+          <h2 style="text-align: center;">{{ product.name }}</h2>
+          <img [src]="product.image"  style="width: 100px ; height: 100px; " class="img" [routerLink]="['/productinfo']" [queryParams]="{image:product.image, description:product.description, name:product.name}"><br>
+          <p class="price">{{ product.price }}</p>
+          <p class="description" >{{ product.description }}</p>
+          <button (click)="decrement(product)">-</button>
+          <input type="number" [value]="product.count" readonly #quantity>
+          <button (click)="increment(product)">+</button><br><br>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div><br>
+    <p><button class="btn btn-warning justify-content-center" (click)="viewcart()"> Go To ViewCart</button></p><br>
+  </div>
+
+
+
+
+
+
+
